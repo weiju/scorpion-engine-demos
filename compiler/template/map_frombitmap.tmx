@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.3" orientation="orthogonal" renderorder="right-down" width="{mapwidth}" height="{mapheight}" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="256" columns="16">
+  <image source="tiles.png" width="256" height="256"/>
+ </tileset>
+ <tileset firstgid="257" name="objects" tilewidth="16" tileheight="16" tilecount="{tilecount}" columns="16">
+  <image source="objects.png" width="256" height="256"/>
+ </tileset>
+ <layer id="1" name="Map" width="{mapwidth}" height="{mapheight}">
+  <data encoding="csv">
+{primarylayer}
+</data>
+ </layer>
+ <layer id="2" name="Objects" width="{mapwidth}" height="{mapheight}">
+  <data encoding="csv">
+{secondarylayer}
+</data>
+ </layer>
+ <layer id="3" name="Foreground" width="{mapwidth}" height="{mapheight}">
+  <data encoding="csv">
+{secondarylayer}
+</data>
+ </layer>
+ <objectgroup id="4" name="Events"/>
+</map>

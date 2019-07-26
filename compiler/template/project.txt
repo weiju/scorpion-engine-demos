@@ -1,0 +1,4 @@
+[project]
+output=..\\{0}
+[level level1]
+source=maps\\map.tmx

@@ -1,0 +1,201 @@
+[project]
+output=..\output\alexkidd
+spriterfile=sprites\alexkidd\alexkidd.sprtr
+spriterfile=sprites\fish\fish.sprtr
+
+[actor killpuff]
+anim_idleright=killpuff_anim
+timer=1
+divert_timer=killpuff_end
+
+[actor alexkidd]
+class=player1
+divert_timer=OnUpdate
+timer=0
+movetype=control_platformer
+speed_x=1.5
+speed_y=3.25
+accel_x=0.1
+accel_y=0.1
+collbox_width=13
+collbox_height=16
+collbox_x=-7
+collbox_y=-5
+anim_idleupleft=idle_left
+anim_idleleft=idle_left
+anim_idledownleft=idle_left
+anim_idleupright=idle_right
+anim_idleright=idle_right
+anim_idledownright=idle_right
+anim_walkupleft=jump_left
+anim_walkleft=walk_left
+anim_walkdownleft=jump_left
+anim_walkupright=jump_right
+anim_walkright=walk_right
+anim_walkdownright=jump_right
+anim_attackupleft=punch_left
+anim_attackleft=punch_left
+anim_attackdownleft=punch_left
+anim_attackupright=punch_right
+anim_attackright=punch_right
+anim_attackdownright=punch_right
+
+[actor alexkidd_swim]
+class=player1
+movetype=control_rpg
+divert_timer=OnUpdate_Water
+timer=0
+speed=1
+accel_x=0.05
+accel_y=0.05
+
+anim_idleupleft=swim_left_idle
+anim_idleleft=swim_left_idle
+anim_idledownleft=swim_left_idle
+anim_idleupright=swim_right_idle
+anim_idleright=swim_right_idle
+anim_idledownright=swim_right_idle
+
+anim_walkupleft=swim_left
+anim_walkleft=swim_left
+anim_walkdownleft=swim_left
+anim_walkupright=swim_right
+anim_walkright=swim_right
+anim_walkdownright=swim_right
+
+anim_attackupleft=swim_attack_left
+anim_attackleft=swim_attack_left
+anim_attackdownleft=swim_attack_left
+anim_attackupright=swim_attack_right
+anim_attackright=swim_attack_right
+anim_attackdownright=swim_attack_right
+
+collbox_width=18
+collbox_height=15
+collbox_x=-9
+collbox_y=-10
+
+[actor alex_ghost]
+movetype=cpu
+anim_walkright=ghost_anim
+speed_y=-0.5
+
+[actor smallfish]
+movetype=cpu_bounce
+speed_x=0.5
+anim_walkleft=smallfish_left
+anim_walkright=smallfish_right
+collbox_width=15
+collbox_height=14
+collbox_x=-7
+collbox_y=-7
+divert_playercollision=player_kill
+divert_playerhit=killfish
+
+[actor bird]
+movetype=cpu_bounce
+speed_x=0.5
+anim_walkleft=bird_left
+anim_walkright=bird_right
+collbox_width=15
+collbox_height=14
+collbox_x=-7
+collbox_y=-7
+divert_playercollision=player_kill
+divert_playerhit=killfish
+
+
+[actor bigfish]
+movetype=cpu_bounce
+speed_x=-0.5
+speed_y=-1
+anim_walkupleft=bigfish_left
+anim_walkleft=bigfish_left
+anim_walkdownleft=bigfish_left
+anim_walkupright=bigfish_right
+anim_walkright=bigfish_right
+anim_walkdownright=bigfish_right
+collbox_width=24
+collbox_height=16
+collbox_x=-11
+collbox_y=-9
+divert_playercollision=player_kill
+divert_playerhit=killfish
+
+[actor merman]
+movetype=cpu_bounce
+lookdir=up
+//Move slightly so only overlapping two columns
+nudge_x=4
+speed_x=0
+speed_y=-0.25
+anim_walkup=merman_default
+anim_walkdown=merman_default
+collbox_width=21
+collbox_height=31
+collbox_x=-10
+collbox_y=-14
+divert_spawn=merman_spawn
+divert_playercollision=player_kill
+divert_playerhit=hit_merman
+
+[level level1]
+source=maps\map.tmx
+
+[block Rock]
+source=maps\objects.png:32:0
+divert_playerhit=destroyblock
+solid=true
+
+[block StarContainer]
+source=maps\objects.png:16:0
+divert_playerhit=BlockToMoney
+solid=true
+
+[block MysteryContainer]
+source=maps\objects.png:48:0
+divert_playerhit=destroyblock
+solid=true
+
+[block ShockContainer]
+source=maps\objects.png:64:0
+divert_playerhit=destroyblock
+solid=true
+
+[block Money]
+source=maps\objects.png:80:0
+divert_playeroverlap=getmoney
+
+[block UnderwaterRock]
+source=maps\objects.png:96:0
+divert_playerhit=destroyblock
+solid=true
+
+[block UnderwaterRiceRock]
+source=maps\objects.png:112:0
+divert_playerhit=finishlevel
+solid=true
+
+[block CheckPoint]
+divert_playeroverlap=checkpoint
+
+[sound sndblock]
+source=sounds\block.aiff
+
+[sound sndcoin]
+source=sounds\coin.aiff
+
+[sound snddie]
+source=sounds\die.aiff
+
+[sound sndenemykill]
+source=sounds\enemykill.aiff
+
+[sound sndwater]
+source=sounds\water.aiff
+
+[panel pnl_title]
+fadein=1
+fadeout=1
+source=title.png
+

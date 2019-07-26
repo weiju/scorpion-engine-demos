@@ -1,0 +1,58 @@
+[project]
+//Output. Where do we want to save our complete Scorpion game when we've done?
+Output=..\output\PW
+
+//Talkpad. For outputting dialogue to. Currently only on top of screen
+//Sets the palette for the talkpad font and talkpad portraits
+Talkpad=Talkpad\talkpad.png
+
+//Prevents the compiler from rendering a talkpad with more than X lines
+talkpad_textmaxlines=4
+
+//Prevents the compiler from rendering a line more than X wide
+talkpad_textmaxwidth=238
+
+//How much spacing do we want between rows?
+talkpad_textyspacing=12
+
+//The font we're using
+talkpad_font=talkpad\font.png
+
+//The draw text coordinates
+talkpad_textx = 40
+talkpad_texty = 8
+
+talkpad_choiceoffset=15
+talkpad_choiceindicator=talkpad\talkpad_choiceindicator.png:0:0
+talkpad_fireindicator=talkpad\talkpad_choiceindicator.png:276:49
+
+//Controls frame rate. 1 = 50FPS, 2 = 25FPS etc
+//This is only applicable to core game, not Anims, static images etc
+//When sprite entities are eventually implemented, they'll run at 50FPS all of the time
+FrameWait=1
+
+[panel pic_title]
+Source=pics\title.png
+FadeIn=1
+FadeOut=1
+
+[level intro0]
+Source=levels\map-intro.tmx
+Palette=levels\intro.png
+
+[level lobby]
+Source=levels\map-lobby.tmx
+Palette=levels\lobby.png
+
+[level court]
+Source=levels\map-court.tmx
+Palette=levels\court.png
+
+[sound snd_gavel]
+Source=sounds\sfx-gavel.aiff
+
+[sound snd_deskslam]
+Source=sounds\sfx-deskslam.aiff
+
+[sound snd_objection]
+Source=sounds\sfx-objection.aiff
