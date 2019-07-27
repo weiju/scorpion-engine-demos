@@ -10,8 +10,7 @@ divert_timer=killpuff_end
 
 [actor alexkidd]
 class=player1
-divert_timer=OnUpdate
-timer=0
+divert_outofscreen=snap_to_screen
 movetype=control_platformer
 speed_x=1.5
 speed_y=3.25
@@ -42,9 +41,8 @@ anim_attackdownright=punch_right
 
 [actor alexkidd_swim]
 class=player1
+divert_outofscreen=snap_to_screen
 movetype=control_rpg
-divert_timer=OnUpdate_Water
-timer=0
 speed=1
 accel_x=0.05
 accel_y=0.05

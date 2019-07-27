@@ -12,10 +12,8 @@ VAR CheckpointY
 ~ panel=null
 
 === RestartLevel===
+~camera_follow = camera_follow_down
 ~level = level1
-~Camera_XMax = 256
-~Camera_XMin = 0
-~Camera_YMin = 0
 
 { CheckpointType:
 	~ Player1_X = CheckpointX
@@ -43,18 +41,7 @@ VAR CheckpointY
 { Player1_Type == alexkidd :
 	~Player1_Type = alexkidd_swim
 }
-~Camera_XMax = 752
--> GAME
-
-=== OnUpdate_Water ===
-{ Camera_X > Camera_XMin:
-	~ Camera_XMin = Camera_X
-}
-
-=== OnUpdate ===
-{ Camera_Y > Camera_YMin:
-	~ Camera_YMin = Camera_Y
-}
+~camera_follow = camera_follow_down + camera_follow_right
 -> GAME
 
 === player_kill ===
