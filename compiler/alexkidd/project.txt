@@ -2,6 +2,7 @@
 output=..\output\alexkidd
 spriterfile=sprites\alexkidd\alexkidd.sprtr
 spriterfile=sprites\fish\fish.sprtr
+spriterfile=sprites\other\other.sprtr
 
 [actor killpuff]
 anim_idleright=killpuff_anim
@@ -73,10 +74,23 @@ collbox_height=15
 collbox_x=-9
 collbox_y=-10
 
+[actor blockbreakleft]
+lookdir=downleft
+anim_walkdownleft=anim_blockbreakleft
+speed_x=0.5
+speed_y=5
+
+[actor blockbreakright]
+lookdir=downright
+anim_walkdownright=anim_blockbreakright
+speed_x=0.5
+speed_y=5
+
 [actor alex_ghost]
 movetype=cpu
-anim_walkright=ghost_anim
-speed_y=-0.5
+anim_walkup=ghost_anim
+lookdir=up
+speed_y=0.5
 
 [actor smallfish]
 movetype=cpu_bounce
@@ -105,8 +119,9 @@ divert_playerhit=killfish
 
 [actor bigfish]
 movetype=cpu_bounce
-speed_x=-0.5
-speed_y=-1
+lookdir=downleft
+speed_x=0.5
+speed_y=1
 anim_walkupleft=bigfish_left
 anim_walkleft=bigfish_left
 anim_walkdownleft=bigfish_left

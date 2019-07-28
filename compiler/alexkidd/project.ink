@@ -50,13 +50,19 @@ VAR CheckpointY
 ~yield = 100
 -> RestartLevel
 
-=== DestroyBlock ===
+=== SpawnBrokenBlock ===
 ~ sound = sndblock
+~ block_spawn = blockbreakleft
+~ block_spawn = blockbreakright
+->->
+
+=== DestroyBlock ===
+-> SpawnBrokenBlock ->
 ~ block_type = null
 -> GAME
 
 === BlockToMoney ===
-~ sound = sndblock
+-> SpawnBrokenBlock ->
 ~ block_type = money
 -> GAME
 
