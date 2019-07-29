@@ -98,8 +98,18 @@ Option2=26:101
 Option3=26:149
 Option4=26:197
 
+[numberfont numbers]
+Source=Hud\numbers.png
+Palette=Hud\hud.png
+
 [panel hud]
 Source=Hud\hud.png
+
+[panelelement hud:rupee]
+NumberFont=numbers
+Digits=3
+X=95
+Y=8
 
 [music mod_intro]
 Source=music\zeldaintro.mod

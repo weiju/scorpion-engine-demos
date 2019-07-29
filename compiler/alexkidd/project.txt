@@ -5,6 +5,7 @@ spriterfile=sprites\fish\fish.sprtr
 spriterfile=sprites\other\other.sprtr
 
 [actor killpuff]
+max=1
 anim_idleright=killpuff_anim
 timer=1
 divert_timer=killpuff_end
@@ -75,12 +76,14 @@ collbox_x=-9
 collbox_y=-10
 
 [actor blockbreakleft]
+max=1
 lookdir=downleft
 anim_walkdownleft=anim_blockbreakleft
 speed_x=0.5
 speed_y=5
 
 [actor blockbreakright]
+max=1
 lookdir=downright
 anim_walkdownright=anim_blockbreakright
 speed_x=0.5
@@ -93,6 +96,7 @@ lookdir=up
 speed_y=0.5
 
 [actor smallfish]
+max=3
 movetype=cpu_bounce
 speed_x=0.5
 anim_walkleft=smallfish_left
@@ -105,6 +109,7 @@ divert_playercollision=player_kill
 divert_playerhit=killfish
 
 [actor bird]
+max=3
 movetype=cpu_bounce
 speed_x=0.5
 anim_walkleft=bird_left
