@@ -791,7 +791,7 @@ Mia:<br>Then, find the evidence that<br>contradicts his testimony,<br>and presen
 	Statue/The Thinker:<br>A statue in the shape of "The Thinker".<br>It's rather heavy.
 }
 { selected_evidence == 3 :
-	Passport:<br>The victim apparently arrived home<br>from Paris on 7/30, the day before the murder.
+	Passport:<br>The victim apparently arrived home<br>from Paris on 7/30,<br>the day before the murder.
 }	
 { selected_evidence == 4 :
 	Blackout Record:<br>Electricity to Ms. Stone's building was out<br>from noon to 6 PM on the day of the crime.

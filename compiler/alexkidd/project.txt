@@ -163,21 +163,25 @@ source=maps\map.tmx
 [block Rock]
 source=maps\objects.png:32:0
 divert_playerhit=destroyblock
+divert_playeroverlap=blockhit
 solid=true
 
 [block StarContainer]
 source=maps\objects.png:16:0
 divert_playerhit=BlockToMoney
+divert_playeroverlap=blockmoneyhit
 solid=true
 
 [block MysteryContainer]
 source=maps\objects.png:48:0
 divert_playerhit=destroyblock
+divert_playeroverlap=blockhit
 solid=true
 
 [block ShockContainer]
 source=maps\objects.png:64:0
 divert_playerhit=destroyblock
+divert_playeroverlap=blockhit
 solid=true
 
 [block Money]

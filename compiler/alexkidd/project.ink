@@ -61,10 +61,43 @@ VAR CheckpointY
 ~ block_type = null
 -> GAME
 
+=== BlockHit ===
+//If we're on the same X coordinate
+{ Player1_X / 16 == Block_X:
+
+	//But one block down
+	{ Player1_Y / 16 == Block_Y + 1:
+	
+		//Stop the player moving upwards
+		~Player1_YSpeed = 0
+	
+		//Destroy the block
+		-> DestroyBlock
+	}
+}
+-> GAME
+
+=== BlockMoneyHit ===
+//If we're on the same X coordinate
+{ Player1_X / 16 == Block_X:
+
+	//But one block down
+	{ Player1_Y / 16 == Block_Y + 1:
+	
+		//Stop the player moving upwards
+		~Player1_YSpeed = 0	
+	
+		//Destroy the block
+		-> BlockToMoney
+	}
+}
+-> GAME
+
 === BlockToMoney ===
 -> SpawnBrokenBlock ->
 ~ block_type = money
 -> GAME
+
 
 === GetMoney ===
 ~ sound = sndcoin
