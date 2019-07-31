@@ -144,7 +144,7 @@ divert_playerhit=killfish
 movetype=cpu_bounce
 lookdir=up
 //Move slightly so only overlapping two columns
-nudge_x=4
+nudge_x=12
 speed_x=0
 speed_y=-0.25
 anim_walkup=merman_default
