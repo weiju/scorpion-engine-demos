@@ -37,4 +37,4 @@ The output folder will have both the game data and a Scorpion game.exe for Amiga
 
 Alternatively, if you have multiple projects in one folder, run "Scorpion.exe [projectname]" to compile a specific project.
 
-# [Back to Table of Contents](../)
+# [Back to Table of Contents](../README.md)
