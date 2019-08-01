@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* ### [Introduction and getting set up](./Introduction/)
-* ### [Project Configuration](./ProjectConfiguration/)
+* ### [Introduction and getting set up](./Introduction/README.md)
+* ### [Project Configuration](./ProjectConfiguration/README.md)
 
 ## Acknowledgements
 
