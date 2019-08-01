@@ -5,6 +5,7 @@ spriterfile=sprites\fish\fish.sprtr
 spriterfile=sprites\other\other.sprtr
 
 [actor killpuff]
+colltype=none
 max=1
 anim_idleright=killpuff_anim
 timer=1
@@ -13,7 +14,7 @@ divert_timer=killpuff_end
 [actor alexkidd]
 class=player1
 divert_outofscreen=snap_to_screen
-movetype=control_platformer
+movetype=control_platform
 speed_x=1.5
 speed_y=3.25
 accel_x=0.1
@@ -44,7 +45,7 @@ anim_attackdownright=punch_right
 [actor alexkidd_swim]
 class=player1
 divert_outofscreen=snap_to_screen
-movetype=control_rpg
+movetype=control
 speed=1
 accel_x=0.05
 accel_y=0.05
@@ -78,6 +79,7 @@ collbox_y=-10
 [actor blockbreakleft]
 max=1
 lookdir=downleft
+colltype=none
 anim_walkdownleft=anim_blockbreakleft
 speed_x=0.5
 speed_y=5
@@ -85,19 +87,22 @@ speed_y=5
 [actor blockbreakright]
 max=1
 lookdir=downright
+colltype=none
 anim_walkdownright=anim_blockbreakright
 speed_x=0.5
 speed_y=5
 
 [actor alex_ghost]
 movetype=cpu
+colltype=none
 anim_walkup=ghost_anim
 lookdir=up
 speed_y=0.5
 
 [actor smallfish]
 max=3
-movetype=cpu_bounce
+movetype=cpu
+colltype=bounce
 speed_x=0.5
 anim_walkleft=smallfish_left
 anim_walkright=smallfish_right
@@ -110,10 +115,20 @@ divert_playerhit=killfish
 
 [actor bird]
 max=3
-movetype=cpu_bounce
+movetype=cpu
+colltype=bounce
 speed_x=0.5
+speed_y=3
+accel_y=0.1
+
+anim_walkupleft=bird_left
 anim_walkleft=bird_left
+anim_walkdownleft=bird_left
+
+anim_walkupright=bird_right
 anim_walkright=bird_right
+anim_walkdownright=bird_right
+
 collbox_width=15
 collbox_height=14
 collbox_x=-7
@@ -123,8 +138,9 @@ divert_playerhit=killfish
 
 
 [actor bigfish]
-movetype=cpu_bounce
+movetype=cpu
 lookdir=downleft
+colltype=bounce
 speed_x=0.5
 speed_y=1
 anim_walkupleft=bigfish_left
@@ -141,8 +157,9 @@ divert_playercollision=player_kill
 divert_playerhit=killfish
 
 [actor merman]
-movetype=cpu_bounce
+movetype=cpu
 lookdir=up
+colltype=bounce
 //Move slightly so only overlapping two columns
 nudge_x=12
 speed_x=0

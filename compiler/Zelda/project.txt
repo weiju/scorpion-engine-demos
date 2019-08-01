@@ -33,7 +33,7 @@ SpriterFile=Sprites\collectables\collectables.sprtr
 [actor link]
 Speed=1.5
 Class=Player1
-movetype=control_rpg
+movetype=control
 Anim_WalkUp=walk_u
 Anim_WalkDown=walk_d
 Anim_WalkLeft=walk_l
