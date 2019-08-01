@@ -160,4 +160,4 @@ This imports all animations in a spriter file for use in the game. Note that all
 This allows you to divert to the Ink Script on the end of an animation. You may, for example, decrease a life or exit the level once a player "death" animation has played.
 
 
-# [Back to Table of Contents](../)
+# [Back to Table of Contents](../README.md)
