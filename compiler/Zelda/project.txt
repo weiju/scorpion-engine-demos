@@ -32,7 +32,7 @@ SpriterFile=Sprites\collectables\collectables.sprtr
 
 [actor link]
 Speed=1.5
-Class=Player1
+Class=player
 movetype=control
 Anim_WalkUp=walk_u
 Anim_WalkDown=walk_d
@@ -76,7 +76,7 @@ Divert_PlayerHit=hitbush
 
 [block rupee1]
 Source=maps\objects.png:64:16
-Divert_PlayerOverlap=OVERLAP_RUPEE
+Divert_Playercollision=collision_RUPEE
 
 [block chair]
 Source=maps\objects.png:32:16

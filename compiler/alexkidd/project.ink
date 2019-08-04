@@ -4,6 +4,7 @@ CONST CheckpointWater = 2
 VAR CheckpointType
 VAR CheckpointX
 VAR CheckpointY
+VAR Ammo
 
 === RestartGame ===
 ~ checkpointtype = CheckpointNA
@@ -12,12 +13,13 @@ VAR CheckpointY
 ~ panel=null
 
 === RestartLevel===
+~ammo = 0
 ~camera_follow = camera_follow_down
 ~level = level1
 
 { CheckpointType:
-	~ Player1_X = CheckpointX
-	~ Player1_Y = CheckpointY
+	~ player_X = CheckpointX
+	~ player_Y = CheckpointY
 	{ CheckpointType == CheckpointWater:
 		-> HitWater
 	}
@@ -25,28 +27,35 @@ VAR CheckpointY
 -> GAME
 
 === checkpoint ===
-{ Player1_Type == AlexKidd:
+{ player_Type == AlexKidd:
 	~ CheckpointType = CheckpointLand
 }
-{ Player1_Type == AlexKidd_Swim:
+{ player_Type == AlexKidd_Swim:
 	~ CheckpointType = CheckpointWater
 }
-~ CheckpointX = Player1_X
-~ CheckpointY = Player1_Y
+~ CheckpointX = Block_X * 16 + 8
+~ CheckpointY = Block_Y * 16 + 8
 ~ Block_Type = null
 -> GAME
 
 === HitWater ===
 ~ sound = sndwater
-{ Player1_Type == alexkidd :
-	~Player1_Type = alexkidd_swim
+{ player_Type == alexkidd :
+	~player_Type = alexkidd_swim
 }
 ~camera_follow = camera_follow_down + camera_follow_right
 -> GAME
 
+=== alex_punch ===
+{ ammo:
+	~ player_shoot = ringshot
+	~ ammo = ammo - 1
+}
+->GAME
+
 === player_kill ===
 ~sound = snddie
-~player1_type = alex_ghost
+~player_type = alex_ghost
 ~yield = 100
 -> RestartLevel
 
@@ -58,18 +67,30 @@ VAR CheckpointY
 
 === DestroyBlock ===
 -> SpawnBrokenBlock ->
+{ block_type == MysteryContainer :
+	~ block_type = Ring
+	-> GAME
+}
+{ block_type == StarContainer :
+	~ block_type = Money
+	-> GAME
+}
+{ block_type == UnderwaterBurgerRock:
+	~ block_type = burger
+	-> GAME
+}
 ~ block_type = null
 -> GAME
 
 === BlockHit ===
 //If we're on the same X coordinate
-{ Player1_X / 16 == Block_X:
+{ player_X / 16 == Block_X:
 
 	//But one block down
-	{ Player1_Y / 16 == Block_Y + 1:
+	{ player_Y / 16 == Block_Y + 1:
 	
 		//Stop the player moving upwards
-		~Player1_YSpeed = 0
+		~player_YSpeed = 0
 	
 		//Destroy the block
 		-> DestroyBlock
@@ -77,30 +98,14 @@ VAR CheckpointY
 }
 -> GAME
 
-=== BlockMoneyHit ===
-//If we're on the same X coordinate
-{ Player1_X / 16 == Block_X:
-
-	//But one block down
-	{ Player1_Y / 16 == Block_Y + 1:
-	
-		//Stop the player moving upwards
-		~Player1_YSpeed = 0	
-	
-		//Destroy the block
-		-> BlockToMoney
-	}
-}
--> GAME
-
-=== BlockToMoney ===
--> SpawnBrokenBlock ->
-~ block_type = money
--> GAME
-
-
 === GetMoney ===
 ~ sound = sndcoin
+~ block_type = null
+-> GAME
+
+=== GetRing ===
+~ sound = sndcoin
+~ ammo = 10
 ~ block_type = null
 -> GAME
 

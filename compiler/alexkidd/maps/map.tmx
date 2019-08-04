@@ -107,7 +107,7 @@
   </tile>
   <tile id="7" type="Block">
    <properties>
-    <property name="Name" value="UnderwaterRiceRock"/>
+    <property name="Name" value="UnderwaterBurgerRock"/>
    </properties>
   </tile>
   <tile id="16" type="actor">

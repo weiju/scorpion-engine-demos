@@ -8,12 +8,21 @@ spriterfile=sprites\other\other.sprtr
 colltype=none
 max=1
 anim_idleright=killpuff_anim
-timer=1
+timer=0.5
 divert_timer=killpuff_end
 
+[actor ringshot]
+class=playerprojectile
+anim_walkleft=anim_shootleft
+anim_walkright=anim_shootright
+colltype=destroy
+max=1
+speed_x=4
+
 [actor alexkidd]
-class=player1
+class=player
 divert_outofscreen=snap_to_screen
+divert_attack=alex_punch
 movetype=control_platform
 speed_x=1.5
 speed_y=3.25
@@ -43,7 +52,7 @@ anim_attackright=punch_right
 anim_attackdownright=punch_right
 
 [actor alexkidd_swim]
-class=player1
+class=player
 divert_outofscreen=snap_to_screen
 movetype=control
 speed=1
@@ -135,7 +144,7 @@ collbox_x=-7
 collbox_y=-7
 divert_playercollision=player_kill
 divert_playerhit=killfish
-
+divert_playerprojectilecollision=killfish
 
 [actor bigfish]
 movetype=cpu
@@ -180,43 +189,55 @@ source=maps\map.tmx
 [block Rock]
 source=maps\objects.png:32:0
 divert_playerhit=destroyblock
-divert_playeroverlap=blockhit
+divert_playerprojectilecollision=destroyblock
+divert_playercollision=blockhit
 solid=true
 
 [block StarContainer]
 source=maps\objects.png:16:0
-divert_playerhit=BlockToMoney
-divert_playeroverlap=blockmoneyhit
+divert_playerhit=destroyblock
+divert_playerprojectilecollision=destroyblock
+divert_playercollision=blockhit
 solid=true
 
 [block MysteryContainer]
 source=maps\objects.png:48:0
 divert_playerhit=destroyblock
-divert_playeroverlap=blockhit
+divert_playerprojectilecollision=destroyblock
+divert_playercollision=blockhit
 solid=true
 
 [block ShockContainer]
 source=maps\objects.png:64:0
 divert_playerhit=destroyblock
-divert_playeroverlap=blockhit
+divert_playerprojectilecollision=destroyblock
+divert_playercollision=blockhit
 solid=true
 
 [block Money]
 source=maps\objects.png:80:0
-divert_playeroverlap=getmoney
+divert_playercollision=getmoney
 
 [block UnderwaterRock]
 source=maps\objects.png:96:0
 divert_playerhit=destroyblock
 solid=true
 
-[block UnderwaterRiceRock]
+[block UnderwaterBurgerRock]
 source=maps\objects.png:112:0
-divert_playerhit=finishlevel
+divert_playerhit=destroyblock
 solid=true
 
+[block Burger]
+source=maps\objects.png:128:0
+divert_playercollision=finishlevel
+
+[block Ring]
+source=maps\objects.png:144:0
+divert_playercollision=getring
+
 [block CheckPoint]
-divert_playeroverlap=checkpoint
+divert_playercollision=checkpoint
 
 [sound sndblock]
 source=sounds\block.aiff

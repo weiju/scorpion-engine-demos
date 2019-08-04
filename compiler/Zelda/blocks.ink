@@ -6,7 +6,7 @@
 }
 ->Game
 
-=== OVERLAP_RUPEE ===
+=== COLLISION_RUPEE ===
 ~block_type = null
 ~rupee = rupee + 1
 ->Game

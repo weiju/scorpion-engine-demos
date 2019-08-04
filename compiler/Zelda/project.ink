@@ -117,9 +117,9 @@ Come quickly to the castle Link, you are my<br>only hope<3>.<3>.<3>.
 === OPEN_SHIELDCHEST1 ===
 ~has_shield=true
 -> HAPPY_SOUND ->
-~player1_animation=pickup_shield
+~player_animation=pickup_shield
 You found a shield!!!<br><br>Your defence rises by one point.
-~player1_type=link_shield
+~player_type=link_shield
 -> GAME
 
 === TRY_HOUSE_EXIT ===
@@ -138,7 +138,7 @@ You found a shield!!!<br><br>Your defence rises by one point.
 
 === sword_pickup_spawn ===
 //If we have the sword already, set to null
-{ player1_type == link_sword : 
+{ player_type == link_sword : 
 	~actor_type = null
 }
 -> GAME
@@ -146,8 +146,8 @@ You found a shield!!!<br><br>Your defence rises by one point.
 === sword_pickup_COLLISION ===
 ~actor_type = null
 -> HAPPY_SOUND ->
-~player1_animation=pickup_sword
-~player1_type=link_sword
+~player_animation=pickup_sword
+~player_type=link_sword
 ~has_sword=true
 You found a sword!!!<br><br>You can now fight monsters.
 -> GAME
@@ -162,11 +162,11 @@ N: Link's Home<br>W: Hyrule Field<br>E: Forest Temple
 
 === Link_Spawn ===
 { has_sword:
-	~player1_type=link_sword
+	~player_type=link_sword
 	->GAME
 }
 { has_shield:
-	~player1_type=link_shield
+	~player_type=link_shield
 }
 ->GAME
 

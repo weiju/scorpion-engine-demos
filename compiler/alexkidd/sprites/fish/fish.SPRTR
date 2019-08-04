@@ -8,12 +8,6 @@ frame 1 duration=20
 [Spriter Data]
 Version Number=8
 [frame bigfish_left1]
-colrect colrect 0 height=16
-colrect colrect 0 value=0
-colrect colrect 0 width=24
-colrect colrect 0 x=-11
-colrect colrect 0 y=-9
-colrect: colrect 0=0
 sprite 0 angle=0
 sprite 0 color=0
 sprite 0 height=16
@@ -62,12 +56,6 @@ sprite 0 x flip=0
 sprite 0 y=-9
 sprite 0 y flip=0
 [frame merman1]
-colrect colrect 0 height=31
-colrect colrect 0 value=0
-colrect colrect 0 width=21
-colrect colrect 0 x=-10
-colrect colrect 0 y=-14
-colrect: colrect 0=0
 sprite 0 angle=0
 sprite 0 color=0
 sprite 0 height=32
@@ -92,12 +80,6 @@ sprite 0 x flip=0
 sprite 0 y=-14
 sprite 0 y flip=0
 [frame smallfish_left1]
-colrect colrect 0 height=14
-colrect colrect 0 value=0
-colrect colrect 0 width=15
-colrect colrect 0 x=-7
-colrect colrect 0 y=-7
-colrect: colrect 0=0
 sprite 0 angle=0
 sprite 0 color=0
 sprite 0 height=16

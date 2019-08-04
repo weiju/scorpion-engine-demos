@@ -2,28 +2,28 @@
 //DO NOT CHANGE ANY OF THE "VAR" lines
 -> end_of_standardlibrary
 
-VAR Player1_x
-VAR Player1_xmove
-VAR Player1_y
-VAR Player1_ymove
-VAR Player1_xspeed
-VAR Player1_xpush
-VAR Player1_yspeed
-VAR Player1_ypush
+VAR Player_x
+VAR Player_shoot
+VAR Player_y
+VAR Player_spawn
+VAR Player_xspeed
+VAR Player_xpush
+VAR Player_yspeed
+VAR Player_ypush
 
-VAR Player1_animation
-VAR Player1_lookdir
-VAR Player1_var1
-VAR Player1_var2
-VAR Player1_var3
-VAR Player1_var4
-VAR Player1_var5
-VAR Player1_var6
+VAR Player_animation
+VAR Player_lookdir
+VAR Player_type
+VAR Player_var1
+VAR Player_var2
+VAR Player_var3
+VAR Player_var4
+VAR Player_var5
 
 VAR Actor_x
-VAR Actor_xmove
+VAR Actor_shoot
 VAR Actor_y
-VAR Actor_ymove
+VAR Actor_spawn
 VAR Actor_xspeed
 VAR Actor_xpush
 VAR Actor_yspeed
@@ -31,17 +31,17 @@ VAR Actor_ypush
 
 VAR Actor_animation
 VAR Actor_lookdir
+VAR Actor_type
 VAR Actor_var1
 VAR Actor_var2
 VAR Actor_var3
 VAR Actor_var4
 VAR Actor_var5
-VAR Actor_var6
 
 VAR PlayerProjectile_x
-VAR PlayerProjectile_xmove
+VAR PlayerProjectile_shoot
 VAR PlayerProjectile_y
-VAR PlayerProjectile_ymove
+VAR PlayerProjectile_spawn
 VAR PlayerProjectile_xspeed
 VAR PlayerProjectile_xpush
 VAR PlayerProjectile_yspeed
@@ -49,12 +49,12 @@ VAR PlayerProjectile_ypush
 
 VAR PlayerProjectile_animation
 VAR PlayerProjectile_lookdir
+VAR PlayerProjectile_type
 VAR PlayerProjectile_var1
 VAR PlayerProjectile_var2
 VAR PlayerProjectile_var3
 VAR PlayerProjectile_var4
 VAR PlayerProjectile_var5
-VAR PlayerProjectile_var6
 
 VAR Camera_X = 0
 VAR Camera_Y = 0
@@ -83,15 +83,10 @@ VAR Block_Spawn = 0
 VAR Block_X = 0
 VAR Block_Y = 0
 
-VAR Player1_Type = 0
-VAR Player1_Spawn = 0
-VAR Actor_Type = 0
-VAR Actor_Spawn = 0
 VAR Control1_X = 0
 VAR Control1_Y = 0
 VAR Control1_Fire = 0
 VAR Control1_FireHit = 0
-
 VAR Yield = 0
 VAR Teleport = 0
 VAR ForceFadeOut = 0
