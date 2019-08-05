@@ -227,3 +227,63 @@ frame 0=bird_right1
 frame 0 duration=20
 frame 1=bird_right2
 frame 1 duration=20
+[frame ghostleft1]
+sprite 0 angle=0
+sprite 0 color=0
+sprite 0 height=16
+sprite 0 image=\ghostleft1.png
+sprite 0 ink=normal
+sprite 0 opacity=100
+sprite 0 width=16
+sprite 0 x=-8
+sprite 0 x flip=0
+sprite 0 y=-8
+sprite 0 y flip=0
+[frame ghostleft2]
+sprite 0 angle=0
+sprite 0 color=0
+sprite 0 height=16
+sprite 0 image=\ghostleft2.png
+sprite 0 ink=normal
+sprite 0 opacity=100
+sprite 0 width=16
+sprite 0 x=-8
+sprite 0 x flip=0
+sprite 0 y=-8
+sprite 0 y flip=0
+[frame ghostright1]
+sprite 0 angle=0
+sprite 0 color=0
+sprite 0 height=16
+sprite 0 image=\ghostright1.png
+sprite 0 ink=normal
+sprite 0 opacity=100
+sprite 0 width=16
+sprite 0 x=-8
+sprite 0 x flip=0
+sprite 0 y=-8
+sprite 0 y flip=0
+[frame ghostright2]
+sprite 0 angle=0
+sprite 0 color=0
+sprite 0 height=16
+sprite 0 image=\ghostright2.png
+sprite 0 ink=normal
+sprite 0 opacity=100
+sprite 0 width=16
+sprite 0 x=-8
+sprite 0 x flip=0
+sprite 0 y=-8
+sprite 0 y flip=0
+[char first character/anim ghost_rightanim]
+=
+frame 0=ghostright1
+frame 0 duration=20
+frame 1=ghostright2
+frame 1 duration=20
+[char first character/anim ghost_leftanim]
+=
+frame 0=ghostleft1
+frame 0 duration=20
+frame 1=ghostleft2
+frame 1 duration=20

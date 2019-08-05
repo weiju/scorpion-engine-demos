@@ -5,6 +5,7 @@
 * ### [Introduction and getting set up](./Introduction/README.md)
 * ### [Project Configuration](./ProjectConfiguration/README.md)
 * ### [Panels](./Panels/README.md)
+* ### [Levels](./Levels/README.md)
 
 ## Acknowledgements
 
