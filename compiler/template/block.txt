@@ -1,0 +1,5 @@
+ <tile id="{blockid}">
+  <properties>
+   <property name="Solid" type="bool" value="{IsSolid}"/>
+  </properties>
+ </tile>

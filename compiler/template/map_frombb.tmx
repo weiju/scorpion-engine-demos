@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="{width}" height="{height}" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" source="blocks{blockset}.tsx"/>
+ <tileset firstgid="{objgid}" source="objects.tsx"/> 
+ <layer id="1" name="Map" width="{width}" height="{height}">
+  <data encoding="csv">
+{bgLayer}
+</data>
+ </layer>
+ <layer id="2" name="Objects" width="{width}" height="{height}">
+  <data encoding="csv">
+{obLayer}
+</data>
+ </layer>
+ <layer id="3" name="Foreground" width="{width}" height="{height}">
+  <data encoding="csv">
+{fgLayer}
+</data>
+ </layer>
+ <objectgroup id="4" name="Events">
+ {eventLayer}
+ </objectgroup>
+</map>

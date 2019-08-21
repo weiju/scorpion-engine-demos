@@ -1,0 +1,5 @@
+  <object id="{id}" type="{type}" x="{x}" y="{y}" width="{width}" height="{height}">
+   <properties>
+    <property name="divert" value="{divertvalue}"/>
+   </properties>
+  </object>

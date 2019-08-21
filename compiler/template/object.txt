@@ -1,0 +1,5 @@
+ <tile id="{ObjectID}" type="{BlockOrActor}">
+  <properties>
+   <property name="Name" value="{ObjectName}"/>
+  </properties>
+ </tile>
